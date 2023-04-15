@@ -47,8 +47,6 @@ with open('ProductList.txt', 'r', encoding='utf-8') as f:
 
     unique_cpes = set(search_result4)
 
-    print(unique_cpes)
-
 # Create XML-Like .swidtag file.
 root = ET.Element('swid:SoftwareIdentity', {'xmlns:swid': 'http://standards.iso.org/iso/19770/-2/2015/schema.xsd',
                                              'xmlns:xsi': 'htttp://www.w3.org/2001/XMLSchema-instance',
@@ -67,7 +65,7 @@ ET.SubElement(root, 'swid:Entity', {
 for cpe in unique_cpes:
     link = ET.SubElement(root, 'swid:Link', {'rel': 'component', 'href': cpe })
 
-# Export .swidtag file    
+# Export .swidtag file.
 xml_string = ET.tostring(root, encoding='utf-8', xml_declaration=True)
 dom = minidom.parseString(xml_string)
 with open('output.swidtag', 'w', encoding='utf-8') as f:

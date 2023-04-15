@@ -8,11 +8,11 @@ IPAが開発したセキュリティ情報の収集ツールである、**mjchec
 SPDXは規格的にいくつかのファイルフォーマットをサポートしていますが、本スクリプトは *SPDX Tag/value documen*を対象にしています。
 別のファイルフォーマットは現在サポートを検討していません。
 
----
+```
 git clone https://github.com/O-SHI-RI/spdx2swid.git
 cd spdx2swid
 python SPDX2SWIDTAG.py xxxx.spdx
----
+```
 
 スクリプト実行時の引数として、変換したいspdxファイルを渡してください。
 

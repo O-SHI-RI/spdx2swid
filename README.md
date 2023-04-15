@@ -1,4 +1,4 @@
-# spdx2swid
+# spdx2swidtag
 
 IPAが開発したセキュリティ情報の収集ツールである、**mjcheck4** (<https://jvndb.jvn.jp/apis/myjvn/mjcheck4.html>) にSBOMのインポート機能が実装されましたが、
 サポートフォーマットが *.swidtag* のみであり、SPDXなどのファイルフォーマットに対応していなかった為、 *.spdx* フォーマットのファイルを *.swidtag* に変換するスクリプトです。

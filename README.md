@@ -17,12 +17,12 @@ python SPDX2SWIDTAG.py xxxx.spdx
 
 スクリプト実行時の引数として、変換したいspdxファイルを渡してください。
 
-#　ProductList.txtについて
+# ProductList.txtについて
 
 本リストは、IPAが公開している **MyJVN API** (<https://jvndb.jvn.jp/apis/index.html>)を経由して作成しています。2023年4月中旬のデータで作成していますが、
 情報が古くなりますので、必要に応じて各々でデータを更新してください。
 
-#　ライセンス
+# ライセンス
 
 BSD-2ライセンスとしています。
 一部、ChatGPTによってコードを出力し、そのコードに変更を加えています。

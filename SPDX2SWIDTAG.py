@@ -43,12 +43,13 @@ with open('ProductList.txt', 'r', encoding='utf-8') as f:
         cpe_match = cpe_pattern.search(line)
         if cpe_match:
             cpe = cpe_match.group(1)
-            search_result4.append(cpe+'\n')
+            search_result4.append(cpe)
 
     unique_cpes = set(search_result4)
 
+    print(unique_cpes)
 
-#  Create XML-Like .swidtag file.
+# Create XML-Like .swidtag file.
 root = ET.Element('swid:SoftwareIdentity', {'xmlns:swid': 'http://standards.iso.org/iso/19770/-2/2015/schema.xsd',
                                              'xmlns:xsi': 'htttp://www.w3.org/2001/XMLSchema-instance',
                                              'xsi:schemaLocation': 'http://standards.iso.org/iso/19770/-2/2015/schema.xsd http://standards.iso.org/iso/19770/-2/2015-current/schema.xsd',
@@ -62,14 +63,12 @@ ET.SubElement(root, 'swid:Entity', {
     'regid': 'https://jvndb.jvn.jp/apis/myjvn/mjcheck4.html', 
     'role': 'tagCreator'})
 
-# Create Entity Element.
+# Create Link Element.
 for cpe in unique_cpes:
     link = ET.SubElement(root, 'swid:Link', {'rel': 'component', 'href': cpe })
-    
+
+# Export .swidtag file    
 xml_string = ET.tostring(root, encoding='utf-8', xml_declaration=True)
 dom = minidom.parseString(xml_string)
-
-# Output the .swidtag file.
-# Please chang the file name if needed.
 with open('output.swidtag', 'w', encoding='utf-8') as f:
     f.write(dom.toprettyxml(indent='    '))

@@ -14,6 +14,8 @@ jsonやxmlなどのフォーマットからの変換はサポートしていま�
 - 実行時には変換したい.spdxのファイルを実行時の引数として渡して下さい。  
 
 ```
+git clone https://github.com/O-SHI-RI/spdxtxt_coversion_mjcheck4.git
+cd spdxtxt_coversion_mjcheck4
 python spdxtxt_coversion_mjcheck4.py xxxx.spdx
 ```
 

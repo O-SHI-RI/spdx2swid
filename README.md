@@ -23,9 +23,9 @@ python spdxtxt_coversion_mjcheck4.py xxxx.spdx
 
 スクリプトは下記流れで処理をしています。
 
-    1.  SPDXファイル内の *PackageName:* タグを検索し、そのコンポーネント名を取得。
-    2.  取得したコンポーネント名をJVNのAPIから出力して作成したリスト(ProductList.txt)から検索し、CPE情報を取得。
-    3.　　.swidtagで書き出し。
+1.  SPDXファイル内の *PackageName:* タグを検索し、そのコンポーネント名を取得。
+2.  取得したコンポーネント名をJVNのAPIから出力して作成したリスト(ProductList.txt)から検索し、CPE情報を取得。
+3.  .swidtagで書き出し。
 
 ## 留意事項
 

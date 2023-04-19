@@ -37,7 +37,7 @@ python spdxtxt_coversion_mjcheck4.py xxxx.spdx
 
 ## ProductList.txtについて
 
-- 本リストは、IPAが公開している **MyJVN API** (<https://jvndb.jvn.jp/apis/index.html>)を経由して作成しています。  
+- IPAが公開している **MyJVN API** (<https://jvndb.jvn.jp/apis/index.html>)を経由して作成しています。  
 - 2023年4月中旬のデータで作成していますが、情報が古くなりますので、必要に応じて各々でデータを更新してください。
 
 ## ライセンス

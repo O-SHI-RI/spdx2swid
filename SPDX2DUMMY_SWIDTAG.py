@@ -9,6 +9,8 @@ package_names = []
 # If your SPDX file has diffrent name for "packageName", please change here.
 with open(sys.argv[1], 'r') as file:
     for line in file:
+        if line.startswith('Creator: Organization:'):
+            organization_name = line.replace('Creator: Organization:', ' ').strip()
         if line.startswith('PackageName: '):
             package_name = line.replace('PackageName: ', '').strip()
             package_names.append(package_name)
@@ -53,12 +55,12 @@ root = ET.Element('swid:SoftwareIdentity', {'xmlns:swid': 'http://standards.iso.
                                              'xsi:schemaLocation': 'http://standards.iso.org/iso/19770/-2/2015/schema.xsd http://standards.iso.org/iso/19770/-2/2015-current/schema.xsd',
                                              'name': '',
                                              'tagId': '',
-                                             'version': '1.0'})
+                                             'version': ''})
 
 # Create Entity Element.
 ET.SubElement(root, 'swid:Entity', {
-    'name': 'MyJVN mjcheck4',
-    'regid': 'https://jvndb.jvn.jp/apis/myjvn/mjcheck4.html', 
+    'name': organization_name,
+    'regid': '', 
     'role': 'tagCreator'})
 
 # Create Link Element.

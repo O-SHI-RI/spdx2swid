@@ -27,7 +27,7 @@ python spdxtxt_coversion_mjcheck4.py xxxx.spdx
 2.  取得したコンポーネント名をJVN APIから出力したリスト(ProductList.txt)から検索し、CPE情報を取得。
 3.  .swidtagで書き出し。
 
-## 留意事項
+## その他
 
 -   スクリプトではSPDXファイルから *PackageName:* のみを取得しているため、ベンダー情報などは取得していません。
 -   例えば[Virtual Box]がコンポーネントある場合、JVNのDBには複数ベンダーが登録されているため、mjcheck4インポート後に適切な方を選択してください。

@@ -1,4 +1,4 @@
-# spdx_txt2dummy_swidtag4mjcheck4
+# spdxtxt_coversion_mjcheck4
 
 IPAが開発したセキュリティ情報の収集ツールである、**mjcheck4** (<https://jvndb.jvn.jp/apis/myjvn/mjcheck4.html>) にSBOMのインポート機能が実装されました。  
 本機能がサポートするファイルフォーマットが現状 *.swidtag* のみとなっており、一部のSBOM生成ツールが出力するSPDX仕様のファイルは食わすことができないのでそれを変換するスクリプトです。  
@@ -14,7 +14,7 @@ jsonやxmlなどのフォーマットからの変換はサポートしていま�
 実行時には変換したい.spdxのファイルを実行時の引数として渡して下さい。  
 
 ```
-python SPDX2SWIDTAG.py xxxx.spdx
+python spdxtxt_coversion_mjcheck4.py xxxx.spdx
 ```
 
 ## スクリプトの説明

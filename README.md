@@ -1,17 +1,17 @@
 # spdxtxt_coversion_mjcheck4
 
-IPAが開発したセキュリティ情報の収集ツールである、**mjcheck4** (<https://jvndb.jvn.jp/apis/myjvn/mjcheck4.html>) にSBOMのインポート機能が実装されました。  
-本機能がサポートするファイルフォーマットが現状 *.swidtag* のみとなっており、一部のSBOM生成ツールが出力するSPDX仕様のファイルは食わすことができないのでそれを変換するスクリプトです。  
-但し、SPDXは仕様としていくつかのファイルフォーマット(json、yaml、rdf/xml、tag:value(テキスト)、xls)を利用可能としていますが、**本スクリプトはtag:value(テキスト)形式のファイルを変換する為だけに作成しています。**  
+- IPAが開発したセキュリティ情報の収集ツールである、**mjcheck4** (<https://jvndb.jvn.jp/apis/myjvn/mjcheck4.html>) にSBOMのインポート機能が実装されました。  
+- 本機能がサポートするファイルフォーマットが現状 *.swidtag* のみとなっており、一部のSBOM生成ツールが出力するSPDX仕様のファイルは食わすことができないのでそれを変換するスクリプトです。  
+- 但し、SPDXは仕様としていくつかのファイルフォーマット(json、yaml、rdf/xml、tag:value(テキスト)、xls)を利用可能としていますが、**本スクリプトはtag:value(テキスト)形式のファイルを変換する為だけに作成しています。**  
 jsonやxmlなどのフォーマットからの変換はサポートしていません。  
-また、***.swidtag* フォーマットへの変換は行いますが、SWID Tagの仕様を満たしたファイルへの変換を行うわけではなく、単にmjcheck4が取り込める用にSPDXのファイルを変換するだけになります。繰り返しとなりますがSWID Tag仕様を満たしたファイルへの変換は行いません。**  
-故に、mjcheck4に取り込む上で必要ではないSWIDタグについてはブランクとしています。
+- また、***.swidtag* フォーマットへの変換は行いますが、SWID Tagの仕様を満たしたファイルへの変換を行うわけではなく、単にmjcheck4が取り込める用にSPDXのファイルを変換するだけになります。繰り返しとなりますがSWID Tag仕様を満たしたファイルへの変換は行いません。**  
+- 故に、mjcheck4に取り込む上で必要ではないSWIDタグについてはブランクとしています。
 
 ## スクリプトの使用
 
-本スクリプトは *SPDX Tag/value document(.spdx)*を対象にしています。  
-他のファイルフォーマットに対する変換はサポートしていません。  
-実行時には変換したい.spdxのファイルを実行時の引数として渡して下さい。  
+- 本スクリプトは *SPDX Tag/value document(.spdx)*を対象にしています。  
+- 他のファイルフォーマットに対する変換はサポートしていません。  
+- 実行時には変換したい.spdxのファイルを実行時の引数として渡して下さい。  
 
 ```
 python spdxtxt_coversion_mjcheck4.py xxxx.spdx
@@ -35,8 +35,8 @@ python spdxtxt_coversion_mjcheck4.py xxxx.spdx
 
 ## ProductList.txtについて
 
-本リストは、IPAが公開している **MyJVN API** (<https://jvndb.jvn.jp/apis/index.html>)を経由して作成しています。  
-2023年4月中旬のデータで作成していますが、情報が古くなりますので、必要に応じて各々でデータを更新してください。
+- 本リストは、IPAが公開している **MyJVN API** (<https://jvndb.jvn.jp/apis/index.html>)を経由して作成しています。  
+- 2023年4月中旬のデータで作成していますが、情報が古くなりますので、必要に応じて各々でデータを更新してください。
 
 ## ライセンス
 

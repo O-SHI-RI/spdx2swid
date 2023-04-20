@@ -1,4 +1,4 @@
-# spdxtxt_coversion_mjcheck4
+# spdxtxt_conversion_mjcheck4
 
 - IPAが開発したセキュリティ情報の収集ツールである**mjcheck4** (<https://jvndb.jvn.jp/apis/myjvn/mjcheck4.html>) にSBOMのインポート機能が実装されました。  
 - 本機能がサポートするファイルフォーマットが現状 *.swidtag* のみとなっており、SPDX仕様のファイルは食わすことができないのでそれを変換するスクリプトです。  
@@ -14,9 +14,9 @@
 - 実行時には変換したい.spdxのファイルを実行時の引数として渡して下さい。  
 
 ```PowerShell
-git clone https://github.com/O-SHI-RI/spdxtxt_coversion_mjcheck4.git
-cd spdxtxt_coversion_mjcheck4
-python spdxtxt_coversion_mjcheck4.py xxxx.spdx
+git clone https://github.com/O-SHI-RI/spdxtxt_conversion_mjcheck4.git
+cd spdxtxt_conversion_mjcheck4
+python spdxtxt_conversion_mjcheck4.py xxxx.spdx
 ```
 
 ## スクリプトの説明

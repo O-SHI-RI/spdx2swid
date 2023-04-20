@@ -29,7 +29,7 @@ python spdxtxt_coversion_mjcheck4.py xxxx.spdx
 
 ## その他
 
--   スクリプトではSPDXファイルから*Creator: Organization:*及び*PackageName:*の値のみ取得しているため、パッケージのサプライヤー情報などは取得していません。
+-   スクリプトではSPDXファイルから*Creator: Organization:* 及び*PackageName:* の値のみ取得しているため、パッケージのサプライヤー情報などは取得していません。
 -   例えば[Virtual Box]がコンポーネントある場合、JVNのDBには複数ベンダーが登録されているため、mjcheck4インポート後に適切な方を選択してください。
 -   これは一部のSBOM生成ツールでは、コンポーネント検出時にサプライヤー情報について*NOASSERTION*として記入していることがある為です。SPDXの仕様としては*NOASSERTION*で記入することは問題ないですが、mjcheck4ではCPE情報にサプライヤー情報がないと取り込めない仕様です。
 -   mjcheck4の仕様上(2023年4月段階)、コンポーネントのバージョン情報はSBOMからインポートできません。これはインポート時にCPE情報にあるバージョン以降の情報を破棄する仕様の為です。

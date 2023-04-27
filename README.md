@@ -13,11 +13,11 @@
 - 本スクリプトは **SPDX Tag/value document(.spdx)** を対象にしています。  
 - 実行時には変換したい.spdxのファイルを実行時の引数として渡して下さい。  
 
-```PowerShell
-git clone https://github.com/O-SHI-RI/spdxtxt_conversion_mjcheck4.git
-cd spdxtxt_conversion_mjcheck4
-python spdxtxt_conversion_mjcheck4.py xxxx.spdx
-```
+    ```PowerShell
+    git clone https://github.com/O-SHI-RI/spdxtxt_conversion_mjcheck4.git
+    cd spdxtxt_conversion_mjcheck4
+    python spdxtxt_conversion_mjcheck4.py xxxx.spdx
+    ```
 
 ## スクリプトの説明
 

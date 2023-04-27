@@ -28,16 +28,17 @@ with open(sys.argv[1], 'r') as file:
 # Open the ProductList file extracted via MyJVN API.
 with open('ProductList.txt', 'r', encoding='utf-8') as f:
     search_result = []
-    # Read ProductList.txt and find the line which includes names of package.
     not_found_packages = []
     found_packages = set()
 
+    # Read ProductList.txt and find the line which includes names of package.
     for line in f:
         for package_name in package_names:
             if package_name in line:
                 search_result.append(line)
                 found_packages.add(package_name)
 
+    #Show undetected packages in JVN Ipedia.
     not_found_packages = list(set(package_names) - found_packages)
     print('Components listed as follows are not found in JVN Ipedia : ', not_found_packages)
 

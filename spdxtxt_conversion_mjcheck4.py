@@ -40,7 +40,7 @@ with open('ProductList.txt', 'r', encoding='utf-8') as f:
 
     #Show undetected packages in JVN Ipedia.
     not_found_packages = list(set(package_names) - found_packages)
-    print('Components listed as follows are not found in JVN Ipedia : ', not_found_packages)
+    print('Components listed as follows may not be in JVN Ipedia : ', not_found_packages)
 
     # Extract the line starting from "<Product".
     search_result2 = []

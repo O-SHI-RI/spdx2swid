@@ -26,10 +26,10 @@
 -   SPDXファイル内の *PackageName:* タグを検索し、そのコンポーネント名を取得。
 -   取得したコンポーネント名をJVN APIから出力したリスト(ProductList.txt)から検索し、CPE情報を取得。
 -   .swidtagで書き出し。
--   SPDXファイルから抽出したコンポーネント名がJVN IpediaのAPIを利用して作成したプロダクトリスト上に見つからない場合、スクリプト実行時に下記ログが表示されます。
+-   本スクリプトが、SPDXファイルから抽出したコンポーネント名をJVN IpediaのAPIを利用して作成したプロダクトリスト上から見つけられない場合、下記ログが表示されます。
     
     ```PowerShell
-    Components listed as follows are not found in JVN Ipedia : xxx
+    Components listed as follows may not be in JVN Ipedia : xxx
     ```
 
 -   ログに表示された非検出コンポーネントはmjchek4上には登録することができません。JVNに登録にDBに登録するようにヒアリングしてみるのも良いかもしれません。

@@ -3,17 +3,28 @@ import re
 import xml.etree.ElementTree as ET
 from xml.dom import minidom
 
+replacements = {
+    '+': r'%2B',
+    '*': r'%2A'
+}
+
 package_names = []
 
 # Open the SPDX(Tag:Value in txt) file passed as an argument to the script and extract "packageName".
 # If your SPDX file has diffrent name for "packageName", please change here.
 with open(sys.argv[1], 'r') as file:
-    for line in file:
+    for line in file:        
         if line.startswith('Creator: Organization:'):
             organization_name = line.replace('Creator: Organization:', ' ').strip()
+    
+    file.seek(0)
+
+    for line in file:
         if line.startswith('PackageName: '):
             package_name = line.replace('PackageName: ', '').strip()
-            package_names.append(package_name)
+            package_name = package_name.lower()  #Added for case insensitive    
+            package_name_replaced = package_name.translate(str.maketrans(replacements))
+            package_names.append(package_name_replaced)
 
 # Open the ProductList file extracted via MyJVN API.
 with open('ProductList.txt', 'r', encoding='utf-8') as f:
